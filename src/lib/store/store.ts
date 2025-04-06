@@ -5,8 +5,6 @@ const reducers = {
     todos: todoSlice.reducer,
 };
 
-
-
 export const store = configureStore({
     reducer: reducers,
 });

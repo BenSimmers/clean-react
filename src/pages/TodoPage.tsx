@@ -9,5 +9,4 @@ const TodoPage: React.FC = () => {
     );
 };
 
-
 export default TodoPage;

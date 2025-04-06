@@ -5,16 +5,14 @@ export const Navigation = () => {
         <nav>
             <ul>
                 <li>
-                    <NavLink to="/" end>
+                    <NavLink to='/' end>
                         Home
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/todos">
-                        Todos
-                    </NavLink>
+                    <NavLink to='/todos'>Todos</NavLink>
                 </li>
             </ul>
         </nav>
     );
-}
+};

@@ -41,5 +41,9 @@ clean:
 # Run all checks (lint + build)
 check: lint build
 
+# Run prettier --write
+prettier:
+	npx prettier --write .
+
 # Default target
 default: dev

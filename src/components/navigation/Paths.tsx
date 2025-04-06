@@ -6,11 +6,9 @@ type PathProps = Array<{
     element: JSX.Element;
 }>;
 
-
 type Props = {
     paths: PathProps;
-}
-
+};
 
 export const Paths: React.FunctionComponent<Props> = ({ paths }) => {
     return (
@@ -20,4 +18,4 @@ export const Paths: React.FunctionComponent<Props> = ({ paths }) => {
             ))}
         </Routes>
     );
-}
+};

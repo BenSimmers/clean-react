@@ -7,5 +7,9 @@ export const SmartTodos: React.FC = () => {
 
     console.log("SmartTodos", todos);
 
-    return todos.map((todo): JSX.Element => <Todo key={todo.id} {...todo} toggleTodo={toggleTodo} />)
-};  
+    return todos.map(
+        (todo): JSX.Element => (
+            <Todo key={todo.id} {...todo} toggleTodo={toggleTodo} />
+        ),
+    );
+};
