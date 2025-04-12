@@ -1,9 +1,3 @@
-import "./App.css";
-import { Provider } from "react-redux";
-import { store } from "./lib/store/store";
-import TodoPage from "./pages/TodoPage";
-import { BrowserRouter, Outlet } from "react-router-dom";
-
 import {
     ComponentProps,
     JSX,
@@ -13,8 +7,15 @@ import {
     useMemo,
 } from "react";
 import React from "react";
-import { Navigation } from "./components/navigation/Navigation";
-import { Paths } from "./components/navigation/Paths";
+
+import "./App.css";
+import { Provider } from "react-redux";
+import { store } from "./lib/store";
+import { TodoPage } from "./pages";
+import { BrowserRouter, Outlet } from "react-router-dom";
+
+
+import { Navigation, Paths } from "./components/navigation";
 
 type InferProps<T> = T extends JSXElementConstructor<infer P> ? P : never;
 
@@ -26,10 +27,10 @@ type ProviderWithProps<T extends JSXElementConstructor<React.ElementType>> = [
 type InferProviderArray<
     T extends ReadonlyArray<JSXElementConstructor<React.ElementType>>,
 > = {
-    [K in keyof T]: T[K] extends JSXElementConstructor<React.ElementType>
+        [K in keyof T]: T[K] extends JSXElementConstructor<React.ElementType>
         ? ProviderWithProps<T[K]>
         : never;
-};
+    };
 
 type ProvidersProps<T extends JSXElementConstructor<React.ElementType>[]> = {
     children: ReactNode;

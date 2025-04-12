@@ -1,6 +1,7 @@
-import { SmartTodos } from "../services/todos/components/SmartTodos";
+import { SmartTodos } from "../services/todos/components";
 
-const TodoPage: React.FC = () => {
+
+export const TodoPage: React.FC = () => {
     return (
         <div>
             <h1>Todo List</h1>
@@ -8,5 +9,3 @@ const TodoPage: React.FC = () => {
         </div>
     );
 };
-
-export default TodoPage;
