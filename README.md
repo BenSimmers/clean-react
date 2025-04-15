@@ -16,6 +16,9 @@ graph TD
     G --> H[API Calls]
     B --> I[Todo Components]
     I --> J[UI Rendering]
+    A --> K[Navigation Component]
+    K --> L[Paths Component]
+    L --> M[React Router]
 ```
 
 ## Features
@@ -75,9 +78,16 @@ in `.github/workflows/deploy.yaml`. To deploy:
 clean-react/
 ├── src/
 │   ├── components/         # Shared UI components
+│   │   ├── navigation/     # Navigation components
+│   │   └── ...             # Other shared components
 │   ├── lib/                # Utilities, hooks, and store
 │   ├── pages/              # Page-level components
 │   ├── services/           # Features (e.g., todos)
+│   │   ├── components/     # Feature-specific components
+│   │   ├── hooks/          # Feature-specific hooks
+|   │   ├── lang/           # Internationalization
+│   │   ├── models/         # Feature-specific types/models
+│   │   └── redux/          # Feature-specific Redux logic
 │   ├── App.tsx             # Main app component
 │   ├── main.tsx            # Entry point
 │   └── index.css           # Global styles
@@ -87,10 +97,3 @@ clean-react/
 ├── vite.config.ts          # Vite configuration
 └── README.md               # Project documentation
 ```
-
-## Scripts
-
-- `npm run dev`: Start the development server.
-- `npm run build`: Build the project for production.
-- `npm run preview`: Preview the production build.
-- `npm run lint`: Lint the codebase using ESLint.
