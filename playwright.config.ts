@@ -6,8 +6,9 @@ export default defineConfig({
         baseURL: "http://localhost:5173",
         browserName: "chromium",
         headless: true,
+        trace: 'on', // Record trace for all tests
     },
-    reporter: "list",
+    reporter: "html", // Generate an HTML report
 
     webServer: {
         command: "npm run dev",
