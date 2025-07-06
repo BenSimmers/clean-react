@@ -25,7 +25,7 @@ export const fetchTodos = createAsyncThunk<Todo[], void>(
 type initialState = {
     todos: Todo[];
     status: Status;
-    error: string | null;
+    error: Error["message"] | null;
 };
 
 const initialState: initialState = {
